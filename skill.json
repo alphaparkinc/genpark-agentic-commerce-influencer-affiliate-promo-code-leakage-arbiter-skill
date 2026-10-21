@@ -1,0 +1,64 @@
+{
+  "name": "genpark-agentic-commerce-influencer-affiliate-promo-code-leakage-arbiter-skill",
+  "version": "1.0.0",
+  "title": "Affiliate Promo Code Leakage & Commission Clawback Arbiter Skill",
+  "description": "Honey/Coupons browser extension promo code leakage detection, organic traffic hijacking attribution, and automated commission clawback arbiter. Built for GenPark (https://www.genpark.ai).",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "category": "agentic-commerce",
+  "topics": [
+    "affiliate-fraud",
+    "coupon-leakage",
+    "commission-clawback",
+    "revenue-leakage",
+    "agentic-commerce",
+    "model-context-protocol",
+    "genpark"
+  ],
+  "tools": [
+    {
+      "name": "detect_coupon_leakage_anomaly",
+      "description": "Identify affiliate promo codes leaked to public coupon aggregator scrapers and browser extensions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "promo_code": {
+            "type": "string"
+          },
+          "affiliate_partner_id": {
+            "type": "string"
+          },
+          "session_referrer": {
+            "type": "string"
+          },
+          "time_delta_since_extension_injection_sec": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "promo_code",
+          "affiliate_partner_id"
+        ]
+      }
+    },
+    {
+      "name": "execute_commission_clawback_adjustment",
+      "description": "Calculate commission clawback for unearned affiliate attribution.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "disputed_commission_total_usd": {
+            "type": "number"
+          },
+          "hijacked_orders_count": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "disputed_commission_total_usd",
+          "hijacked_orders_count"
+        ]
+      }
+    }
+  ]
+}
